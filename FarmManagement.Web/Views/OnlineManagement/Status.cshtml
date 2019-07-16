@@ -1,0 +1,9 @@
+﻿@model IEnumerable<ContactorStatusViewModel>
+
+@foreach (var c in Model)
+{
+    <div>
+        @c.name : @c.status.ToString()
+
+    </div>
+}

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ContactorStatusViewModel>
+
+<form method="get">
+    @foreach (var c in Model)
+    {
+        <div>
+            <h3>@c.name</h3>
+        </div>
+        <div>
+            <input type="radio" asp-for="@c.status" value="False" />
+            <p>Off</p>
+            <input type="radio" asp-for="@c.status" value="True" />
+            <p>On</p>
+        </div>
+    }   
+
+    <input type="submit" value="Change" />
+</form>
